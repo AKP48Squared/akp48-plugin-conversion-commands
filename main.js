@@ -11,7 +11,7 @@ class Conversion extends MessageHandlerPlugin {
 }
 
 Conversion.prototype.handleCommand = function (message, context, res) {
-  GLOBAL.logger.silly(`${this._pluginName}: Received command.`);
+  global.logger.silly(`${this._pluginName}: Received command.`);
 
   // prepare text.
   context.originalText = context.text;
@@ -22,7 +22,7 @@ Conversion.prototype.handleCommand = function (message, context, res) {
   var responses = [];
 
   if(typeof ConvertBase[command] === 'function') {
-    GLOBAL.logger.silly(`${this._pluginName}: Responding to ${command} command.`);
+    global.logger.silly(`${this._pluginName}: Responding to ${command} command.`);
     for (var i = 0; i < text.length; i++) {
       responses.push(`${text[i]} => ${ConvertBase[command](text[i])}`);
     }
@@ -31,7 +31,7 @@ Conversion.prototype.handleCommand = function (message, context, res) {
   }
 
   if(typeof ConvertTemp[command] === 'function') {
-    GLOBAL.logger.silly(`${this._pluginName}: Responding to ${command} command.`);
+    global.logger.silly(`${this._pluginName}: Responding to ${command} command.`);
     for (var i = 0; i < text.length; i++) {
       responses.push(`${ConvertTemp[command](text[i])}`);
     }

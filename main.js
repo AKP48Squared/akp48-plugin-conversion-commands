@@ -1,10 +1,9 @@
 'use strict';
 const ConvertBase = require('./ConvertBase');
 const ConvertTemp = require('./ConvertTemp');
-const MessageHandlerPlugin = require('../../lib/MessageHandlerPlugin');
 const Qty = require('js-quantities');
 
-class Conversion extends MessageHandlerPlugin {
+class Conversion extends global.AKP48.pluginTypes.MessageHandler {
   constructor(AKP48) {
     super('Conversion', AKP48);
   }

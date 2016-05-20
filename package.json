@@ -1,6 +1,6 @@
 {
   "name": "akp48-plugin-conversion-commands",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Allows AKP48 to convert things.",
   "main": "main.js",
   "scripts": {

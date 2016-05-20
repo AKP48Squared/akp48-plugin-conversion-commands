@@ -60,3 +60,4 @@ Conversion.prototype.handleCommand = function (message, context, res) {
 
 module.exports = Conversion;
 module.exports.type = 'MessageHandler';
+module.exports.pluginName = 'conversion-commands';
